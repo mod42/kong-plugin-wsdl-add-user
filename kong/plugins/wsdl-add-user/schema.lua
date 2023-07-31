@@ -15,17 +15,14 @@ local schema = {
         type = "record",
         fields = {
           -- a standard defined field (typedef), with some customizations
-          { request_header = typedefs.header_name {
-              required = true,
-              default = "Hello-World" } },
-          { response_header = typedefs.header_name {
-              required = true,
-              default = "Bye-World" } },
-          { ttl = { -- self defined field
-              type = "integer",
-              default = 600,
-              required = true,
-              gt = 0, }}, -- adding a constraint for the value
+          { username = {
+              type = "string",
+              required = true
+               } },
+          { password =  {
+            type = "string",
+            required = true
+              } },
         },
         entity_checks = {
           -- add some validation rules across fields
