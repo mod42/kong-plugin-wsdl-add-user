@@ -3,14 +3,16 @@
 
 # About
 
-This Kong 🦍 plugin
+This Kong 🦍 plugin is developed to add to an incoming SOAP call a wsse UserToken header
+entry. It is not meant to go into production, but show the concept on how this approach could be achieved.
 
 ## Configuration parameters
+There are 2 required parameters to configure the plugin
 
-|FORM PARAMETER|DEFAULT|DESCRIPTION|
-|:----|:------|:------|
-|config.username||Username for the User Token |
-|config.password||Password for the User Token |
+|FORM PARAMETER|REQUIRED|DEFAULT|DESCRIPTION|
+|:----|:------|:------|:------|
+|config.username|true||Username for the User Token |
+|config.password|true||Password for the User Token |
 
 ## Additional libraries needed
 none
